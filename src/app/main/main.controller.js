@@ -3,37 +3,59 @@
 
   angular
     .module('testMockup')
-    .controller('MainController', MainController);
+    .controller('MainController', ['$scope', '$http', function($scope, $http) {
+        var vm = $scope;
+            vm.model = {};
+            vm.steps = [
+                {
+                    templateUrl: '/app/step1/step1.html',
+                    title: 'Saving data',
+                },
+                {
+                    templateUrl: '/app/step2/step2.html',
+                    hasForm: true,
+                },
+                {
+                    templateUrl: '/app/step3/step3.html',
+                    hasForm: true,
+                },
+                {
+                    templateUrl: '/app/step4/step4.html',
+                    hasForm: true,
+                }
+            ];
 
-  /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
-    var vm = this;
+           vm.getStarWars = function(){
+                $http.get("http://www.omdbapi.com/?s=Star%20Wars:%20Episode")
+                .then(function(response) {
+                    $scope.myWelcome = response.data;
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1466470995466;
-    vm.showToastr = showToastr;
+                    console.log(response.data);
+                });
+           } 
 
-    activate();
+           vm.getGameOfThrones = function(){
+                $http.get("http://www.omdbapi.com/?t=Game%20of%20Thrones")
+                .then(function(response) {
+                    $scope.myWelcome = response.data;
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
-    }
+                    console.log(response.data);
+                });
+           } 
 
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
+           vm.getGameOfThronesSeason = function(season){
+                $http.get("http://www.omdbapi.com/?t=Game%20of%20Thrones&amp;Season=" + season)
+                .then(function(response) {
+                    $scope.myWelcome = response.data;
 
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
+                    console.log(response.data);
+                });
+           } 
 
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
-    }
-  }
+           vm.getStarWars();
+           vm.getGameOfThrones();
+           vm.getGameOfThronesSeason(4);
+    }]);
+
+  
 })();
