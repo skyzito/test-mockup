@@ -1,34 +1,73 @@
-<div layout="vertical" layout-fill>
 
-  <md-content>
-    <header>
-      <acme-navbar creation-date="main.creationDate"></acme-navbar>
-    </header>
+<multi-step-container steps="steps" class="simple-prev-next" ng-disabled="$isFirst()" >
+    <main step-container></main>
 
-    <section class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-      </p>
-      <md-button class="md-raised animated infinite" ng-class="main.classAnimation" ng-click="main.showToastr()">Splendid Toastr</md-button>
-      <p>
-        With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
-      </p>
-    </section>
-
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-        <md-card-content>
-          <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-          <h3 class="md-title">{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-        </md-card-content>
-        <div class="md-action-buttons">
-          <md-button ng-href="{{ awesomeThing.url }}">Website</md-button>
+    <div layout="column" style="width:100%;" ng-hide="!$isFirst()">
+      <md-toolbar style="text-align:center;">
+          <h1>Angular Test</h1>
+          <h2>Ask the questions</h2>
+      </md-toolbar>
+      <div layout="vertical" layout-fill>
+        <div layout="column" style="width:100%;">
+              <form class="questions-form" name="questionsForm">
+                <div layout-gt-sm="row">
+                  <div flex="10" hide-xs hide-sm>
+                      <!-- Spacer //-->
+                  </div>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>Your Favorite Comic super hero</label>
+                    <input type="text" ng-model="model.firstQuestion" name="firstQuestion">
+                  </md-input-container>
+                  <div flex="5" hide-xs hide-sm>
+                    <!-- Spacer //-->
+                  </div>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>Tv Series that you are currently watching</label>
+                    <input type="text" ng-model="model.secondQuestion" name="secondQuestion">
+                  </md-input-container>
+                  <div flex="10" hide-xs hide-sm>
+                      <!-- Spacer //-->
+                  </div>
+                </div>
+                <div layout-gt-sm="row">
+                  <div flex="10" hide-xs hide-sm>
+                      <!-- Spacer //-->
+                  </div>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>Wich one do you use: Bolacha or biscoito?</label>
+                    <input type="text" ng-model="model.thirdQuestion" name="thirdQuestion">
+                  </md-input-container>
+                  <div flex="5" hide-xs hide-sm>
+                    <!-- Spacer //-->
+                  </div>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>What is the best quote ever</label>
+                    <input type="text" ng-model="model.fourthQuestion" name="fourthQuestion">
+                  </md-input-container>
+                  <div flex="10" hide-xs hide-sm>
+                      <!-- Spacer //-->
+                  </div>
+                </div>
+              </form>
+              
         </div>
-      </md-card>
+      </div>
     </div>
-  </md-content>
 
-</div>
+     <div layout="row" layout-align="center center">
+        <button ng-disabled="$isFirst()" class="md-raised md-primary md-button md-ink-ripple" ng-click="$previousStep()">
+            <span class="fa fa-chevron-left"></span>
+            Anterior
+        </button>
+
+        <!-- <strong ng-bind-template="First Question : {{model.firstQuestion}}"></strong>
+        <strong ng-bind-template="Second Question : {{model.secondQuestion}}"></strong>
+        <strong ng-bind-template="Third Question : {{model.thirdQuestion}}"></strong>
+        <strong ng-bind-template="Fourth Question : {{model.fourthQuestion}}"></strong> -->
+
+        <button ng-disabled="$isLast()" class="md-raised md-primary md-button md-ink-ripple" ng-click="$nextStep()">
+            Próximo
+            <span class="fa fa-chevron-right"></span>
+        </button>
+      </div>
+</multi-step-container>
