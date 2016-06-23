@@ -28,33 +28,29 @@
            vm.getStarWars = function(){
                 $http.get("http://www.omdbapi.com/?s=Star%20Wars:%20Episode")
                 .then(function(response) {
-                    $scope.myWelcome = response.data;
-
-                    console.log(response.data);
+                    vm.dataStarWars = response.data;
                 });
            } 
 
            vm.getGameOfThrones = function(){
                 $http.get("http://www.omdbapi.com/?t=Game%20of%20Thrones")
                 .then(function(response) {
-                    $scope.myWelcome = response.data;
-
-                    console.log(response.data);
+                    vm.dataGameOfThrones = response.data;
                 });
            } 
 
            vm.getGameOfThronesSeason = function(season){
-                $http.get("http://www.omdbapi.com/?t=Game%20of%20Thrones&amp;Season=" + season)
+                $http.get("http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=" + season)
                 .then(function(response) {
-                    $scope.myWelcome = response.data;
+                    vm.dataGameOfThronesSeason = response.data;
 
                     console.log(response.data);
-                });
+                }); 
            } 
 
            vm.getStarWars();
            vm.getGameOfThrones();
-           vm.getGameOfThronesSeason(4);
+           // vm.getGameOfThronesSeason(2);
     }]);
 
   
