@@ -1,9 +1,18 @@
 
 <div layout="vertical" layout-fill>
-  <div layout="column" style="width:100%;">
-      <md-toolbar style="text-align:center;">
-          <h1>Angular Test</h1>
-          <h2>Star Wars Pool</h2>
-      </md-toolbar>
-  </div>
+	<div layout="column" style="width:100%;">
+		<md-toolbar style="text-align:center;">
+			<h1>Angular Test</h1>
+			<h2>Star Wars Pool</h2>
+		</md-toolbar>
+		<div layout="row" layout-padding layout-wrap style="padding-bottom: 32px;" ng-cloak>
+			<md-whiteframe class="md-whiteframe-1dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center" ng-repeat="item in dataStarWars.Search">
+				<div>
+					<md-checkbox arial-label="{{item["Title"]}}"></md-checkbox>
+					<img src="{{item['Poster']}}" alt="" style="width:300px;height:458px;">
+					{{item["Title"]}}
+				</div>
+			</md-whiteframe>
+		</div>
+	</div>
 </div>
