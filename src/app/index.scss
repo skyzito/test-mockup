@@ -89,7 +89,24 @@ section.jumbotron {
     }
   }
 }
+.questions-form{
+  margin-top:40px;
+}
 
+.table-got{
+  margin:30px 0;
+  td{
+    text-align: center;
+    border:1px solid #ccc;
+  }
+  th{
+    text-align: center;
+    border:1px solid #ccc;
+  }
+}
+.pull-left{
+  float:left;
+}
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
