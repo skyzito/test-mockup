@@ -1,63 +1,10 @@
 
 <multi-step-container steps="steps" class="simple-prev-next" ng-disabled="$isFirst()" >
     <main step-container></main>
-
-    <div layout="column" style="width:100%;" ng-hide="!$isFirst()">
-      <md-toolbar style="text-align:center;">
-          <h1>Angular Test</h1>
-          <h2>Ask the questions</h2>
-      </md-toolbar>
-      <div layout="vertical" layout-fill>
-        <div layout="column" style="width:100%;">
-              <form class="questions-form" name="questionsForm">
-                <div layout-gt-sm="row">
-                  <div flex="10" hide-xs hide-sm>
-                      <!-- Spacer //-->
-                  </div>
-                  <md-input-container class="md-block" flex-gt-sm>
-                    <label>Your Favorite Comic super hero</label>
-                    <input type="text" ng-model="model.firstQuestion" name="firstQuestion">
-                  </md-input-container>
-                  <div flex="5" hide-xs hide-sm>
-                    <!-- Spacer //-->
-                  </div>
-                  <md-input-container class="md-block" flex-gt-sm>
-                    <label>Tv Series that you are currently watching</label>
-                    <input type="text" ng-model="model.secondQuestion" name="secondQuestion">
-                  </md-input-container>
-                  <div flex="10" hide-xs hide-sm>
-                      <!-- Spacer //-->
-                  </div>
-                </div>
-                <div layout-gt-sm="row">
-                  <div flex="10" hide-xs hide-sm>
-                      <!-- Spacer //-->
-                  </div>
-                  <md-input-container class="md-block" flex-gt-sm>
-                    <label>Wich one do you use: Bolacha or biscoito?</label>
-                    <input type="text" ng-model="model.thirdQuestion" name="thirdQuestion">
-                  </md-input-container>
-                  <div flex="5" hide-xs hide-sm>
-                    <!-- Spacer //-->
-                  </div>
-                  <md-input-container class="md-block" flex-gt-sm>
-                    <label>What is the best quote ever</label>
-                    <input type="text" ng-model="model.fourthQuestion" name="fourthQuestion">
-                  </md-input-container>
-                  <div flex="10" hide-xs hide-sm>
-                      <!-- Spacer //-->
-                  </div>
-                </div>
-              </form>
-              
-        </div>
-      </div>
-    </div>
-
      <div layout="row" layout-align="center center">
         <button ng-disabled="$isFirst()" class="md-raised md-primary md-button md-ink-ripple" ng-click="$previousStep()">
             <span class="fa fa-chevron-left"></span>
-            Anterior
+            Prev
         </button>
 
         <!-- <strong ng-bind-template="First Question : {{model.firstQuestion}}"></strong>
@@ -65,8 +12,8 @@
         <strong ng-bind-template="Third Question : {{model.thirdQuestion}}"></strong>
         <strong ng-bind-template="Fourth Question : {{model.fourthQuestion}}"></strong> -->
 
-        <button ng-disabled="$isLast()" class="md-raised md-primary md-button md-ink-ripple" ng-click="$nextStep()">
-            Próximo
+        <button ng-disabled="$isLast() || ($getActiveStep().hasForm && !$getActiveStep().valid)" class="md-raised md-primary md-button md-ink-ripple" ng-click="$nextStep()">
+            Next
             <span class="fa fa-chevron-right"></span>
         </button>
       </div>
