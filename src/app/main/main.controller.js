@@ -6,10 +6,13 @@
     .controller('MainController', ['$scope', '$http', function($scope, $http) {
         var vm = $scope;
             vm.model = {};
+            vm.formStarWars = {};
+            vm.formGameOfThrones = {};
+            vm.formFood = {};
             vm.steps = [
                 {
                     templateUrl: '/app/step1/step1.html',
-                    title: 'Saving data',
+                    hasForm: true,
                 },
                 {
                     templateUrl: '/app/step2/step2.html',
@@ -22,6 +25,9 @@
                 {
                     templateUrl: '/app/step4/step4.html',
                     hasForm: true,
+                },
+                {
+                    templateUrl: '/app/result/result.html',
                 }
             ];
 
@@ -43,8 +49,7 @@
                 $http.get("http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=" + season)
                 .then(function(response) {
                     vm.dataGameOfThronesSeason = response.data;
-
-                    console.log(response.data);
+                    vm.formGameOfThrones = response.data;
                 }); 
            } 
 
@@ -52,6 +57,4 @@
            vm.getGameOfThrones();
            // vm.getGameOfThronesSeason(2);
     }]);
-
-  
 })();
