@@ -1,0 +1,55 @@
+<div layout="column" style="width:100%;" ng-hide="!$isFirst()">
+      <md-toolbar style="text-align:center;">
+          <h1>Angular Test</h1>
+          <h2>Ask the questions</h2>
+      </md-toolbar>
+      <div layout="vertical" layout-fill>
+        <div layout="column" style="width:100%;">
+              <form name="questionsForm" form-step-validity>
+                <div layout-gt-sm="row">
+                  <div flex="10" hide-xs hide-sm>
+                      <!-- Spacer //-->
+                  </div>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>Your Favorite Comic super hero</label>
+                    <input type="text" ng-model="model.firstQuestion" name="firstQuestion" required>
+                    <p ng-show="questionsForm.firstQuestion.$invalid" class="help-block">This field is required.</p>
+                  </md-input-container>
+                  <div flex="5" hide-xs hide-sm>
+                    <!-- Spacer //-->
+                  </div>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>Tv Series that you are currently watching</label>
+                    <input type="text" ng-model="model.secondQuestion" name="secondQuestion" required>
+                    <p ng-show="questionsForm.secondQuestion.$invalid" class="help-block">This field is required.</p>
+                  </md-input-container>
+                  <div flex="10" hide-xs hide-sm>
+                      <!-- Spacer //-->
+                  </div>
+                </div>
+                <div layout-gt-sm="row">
+                  <div flex="10" hide-xs hide-sm>
+                      <!-- Spacer //-->
+                  </div>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>Wich one do you use: Bolacha or biscoito?</label>
+                    <input type="text" ng-model="model.thirdQuestion" name="thirdQuestion" required>
+                    <p ng-show="questionsForm.thirdQuestion.$invalid" class="help-block">This field is required.</p>
+                  </md-input-container>
+                  <div flex="5" hide-xs hide-sm>
+                    <!-- Spacer //-->
+                  </div>
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>What is the best quote ever</label>
+                    <input type="text" ng-model="model.fourthQuestion" name="fourthQuestion" required>
+                    <p ng-show="questionsForm.fourthQuestion.$invalid" class="help-block">This field is required.</p>
+                  </md-input-container>
+                  <div flex="10" hide-xs hide-sm>
+                      <!-- Spacer //-->
+                  </div>
+                </div>
+              </form>
+              
+        </div>
+      </div>
+    </div>
