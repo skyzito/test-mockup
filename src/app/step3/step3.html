@@ -23,23 +23,64 @@
 	            <span class="md-headline">{{dataGameOfThrones["Year"]}}{{dataGameOfThrones["Title"]}}</span>
 	            <p>{{dataGameOfThrones["Plot"]}}</p>
 	          </md-card-title-text>
-
-
         </md-card-title>
         <div>
-          <form>
+          <form name="gameOfThronesForm"  form-step-validity>
             	<!-- <p>Selected Value: <span class="radioValue">{{ data.group1 }}</span> </p> -->
-			    <md-radio-group layout="row" ng-model="data.group1">
-			   	  <div flex="15">
-                      <!-- Spacer //-->
-                  </div>
-			      <md-radio-button flex="15" value="1" class="md-primary" ng-click="getGameOfThronesSeason(1)">1</md-radio-button>
-			      <md-radio-button flex="15" value="2" ng-click="getGameOfThronesSeason(2)"> 2 </md-radio-button>
-			      <md-radio-button flex="15" value="3" ng-click="getGameOfThronesSeason(3)">3</md-radio-button>
-			      <md-radio-button flex="15" value="4" ng-click="getGameOfThronesSeason(4)">4</md-radio-button>
-			      <md-radio-button flex="15" value="5" ng-click="getGameOfThronesSeason(5)">5</md-radio-button>
-			      <md-radio-button flex="15" value="6" ng-click="getGameOfThronesSeason(6)">6</md-radio-button>
-			    </md-radio-group>
+			    <label>
+	                <input 
+	                	type="radio" 
+	                	name="Season" 
+	                	value="1" 
+	                	ng-model="formGameOfThrones.Season"
+	                	ng-click="getGameOfThronesSeason(1)" required>
+	                1
+	            </label>
+	            <label>
+	                <input 
+	                	type="radio" 
+	                	name="Season" 
+	                	value="2" 
+	                	ng-model="formGameOfThrones.Season"
+	                	ng-click="getGameOfThronesSeason(2)" required>
+	                2
+	            </label>
+	            <label>
+	                <input 
+	                	type="radio" 
+	                	name="Season" 
+	                	value="3" 
+	                	ng-model="formGameOfThrones.Season"
+	                	ng-click="getGameOfThronesSeason(3)" required>
+	                3
+	            </label>
+	            <label>
+	                <input 
+	                	type="radio" 
+	                	name="Season" 
+	                	value="4" 
+	                	ng-model="formGameOfThrones.Season"
+	                	ng-click="getGameOfThronesSeason(4)" required>
+	                4
+	            </label>
+	            <label>
+	                <input 
+	                	type="radio" 
+	                	name="Season" 
+	                	value="5" 
+	                	ng-model="formGameOfThrones.Season"
+	                	ng-click="getGameOfThronesSeason(5)" required>
+	                5
+	            </label>
+	            <label>
+	                <input 
+	                	type="radio" 
+	                	name="Season" 
+	                	value="6" 
+	                	ng-model="formGameOfThrones.Season"
+	                	ng-click="getGameOfThronesSeason(6)" required>
+	                6
+	            </label>
             </form>
         </div>
         <table class="table-got" wt-responsive-table>
