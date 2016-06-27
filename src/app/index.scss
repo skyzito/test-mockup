@@ -107,6 +107,45 @@ section.jumbotron {
 .pull-left{
   float:left;
 }
+.help-block{
+  color:red;
+  font-size:12px;
+  padding-top:30px;
+}
+.wdt-100{
+  width:100%;
+}
+.text-center{
+  text-align: center;
+}
+.got-thumb{
+  width:125px;
+  height:125px;
+}
+.star-wars-thumb{
+  width:197px;
+  height:300px;
+  margin:0 auto;
+}
+.form-star-wars{
+  label{
+    text-align: center;
+  }
+}
+.block{
+  display: block;
+}
+.form-game-of-thrones{
+  padding-left:170px;
+  margin-bottom:30px;
+}
+.form-questions{
+  legend{
+    display: block;
+    margin:20px auto;
+    font-size:22px;
+  }
+}
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
