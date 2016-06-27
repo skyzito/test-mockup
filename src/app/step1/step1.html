@@ -1,11 +1,12 @@
-<div layout="column" style="width:100%;" ng-hide="!$isFirst()">
-      <md-toolbar style="text-align:center;">
+<div layout="column" ng-hide="!$isFirst()">
+      <md-toolbar class="text-center">
           <h1>Angular Test</h1>
-          <h2>Ask the questions</h2>
+          <h2>Answer the questions</h2>
       </md-toolbar>
       <div layout="vertical" layout-fill>
-        <div layout="column" style="width:100%;">
-              <form name="questionsForm" form-step-validity>
+        <div class="wdt-100" layout="column">
+              <form name="questionsForm" class="form-questions" form-step-validity>
+              <legend>Things About you...</legend>
                 <div layout-gt-sm="row">
                   <div flex="10" hide-xs hide-sm>
                       <!-- Spacer //-->

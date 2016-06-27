@@ -1,25 +1,19 @@
-
 <div layout="vertical" layout-fill>
-	<div layout="column" style="width:100%;">
-		<md-toolbar style="text-align:center;">
+	<div class="wdt-100" layout="column">
+		<md-toolbar class="text-center">
 			<h1>Angular Test</h1>
-			<h2>Star Wars Pool</h2>
+			<h2>Star Wars Quiz</h2>
 		</md-toolbar>
-		<div>
-			<div layout="row" layout-padding layout-wrap style="padding-bottom: 32px;" ng-cloak>
-			<form name="starWarsForm"  form-step-validity>
-				<div flex="100" flex-md="33" flex-sm="50" flex-xs="100" ng-repeat="item in dataStarWars.Search">		
-					<div><img src="{{item['Poster']}}" alt="" style="width:197px;height:300px;"></div>
-				    <div>
-						 <label>
-			                <input type="radio" name="film" value="{{item['Title']}}" ng-model="formStarWars.film" required>
-			                {{item["Title"]}}
-			            </label>
-					</div>
-					
+		<form class="form-star-wars" layout="row" layout-padding layout-wrap ng-cloak form-step-validity>
+			<div flex="25" flex-md="33" flex-sm="50" flex-xs="100" ng-repeat="item in dataStarWars.Search">
+				<div><img src="{{item['Poster']}}" class="star-wars-thumb block" alt=""></div>
+			    <div>
+					 <label class="block">
+		                <input type="radio" name="film" value="{{item['Title']}}" ng-model="formStarWars.film" required>
+		                {{item["Title"]}}
+		            </label>
 				</div>
-			</form>
 			</div>
-		</div>
+		</form>
 	</div>
 </div>

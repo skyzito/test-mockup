@@ -11,7 +11,7 @@
 <div layout="vertical" layout-fill>
 	<div layout="column" style="width:100%;">
         <div layout-gt-sm="row">
-          <div flex="10" hide-xs hide-sm>
+          <div flex="10">
               <!-- Spacer //-->
           </div>
           <md-input-container class="md-block" flex-gt-sm>
@@ -43,6 +43,7 @@
           <md-input-container class="md-block" flex-gt-sm>
             <p><strong>What is the best quote ever</strong></p>
             <p>{{model.fourthQuestion}}</p>
+          </md-input-container>
           <div flex="10" hide-xs hide-sm>
               <!-- Spacer //-->
           </div>
@@ -51,20 +52,34 @@
 </div>
 
 <div layout="vertical" layout-fill>
-	<div layout="column" style="width:100%;">
-		<div layout-gt-sm="row">
-			<md-input-container flex="33" class="md-block" flex-gt-sm>
-	            <p><strong>Your favorite star war movie</strong></p>
-	            <p>{{ formStarWars.film }}}</p>
-	        </md-input-container>
-	        <md-input-container flex="33" class="md-block" flex-gt-sm>
-	            <p><strong>Your favorite GoT Season</strong></p>
-	            <p>Season: {{ formGameOfThrones.Season }}</p>
-	        </md-input-container>
-	        <md-input-container flex="33" class="md-block" flex-gt-sm>
-	            <p><strong>Your kind of food</strong></p>
-	            <p>{{ formFood.Food }}</p>
-	        </md-input-container>
-		</div>
+	<div layout="column" class="wdt-100">
+      <div layout-gt-sm="row">
+        <div flex="10">
+            <!-- Spacer //-->
+        </div>
+        
+         <md-input-container class="md-block" flex-gt-sm>
+          <p><strong>Your favorite star war movie</strong></p>
+          <p>{{ formStarWars.film }}</p>
+        </md-input-container>
+
+        <div flex="5" hide-xs hide-sm>
+          <!-- Spacer //-->
+        </div>
+
+        <md-input-container class="md-block" flex-gt-sm>
+          <p><strong>Your favorite GoT Season</strong></p>
+          <p>Season: {{ formGameOfThrones.Season }}</p>
+        </md-input-container>
+        <div flex="5" hide-xs hide-sm>
+          <!-- Spacer //-->
+        </div>
+        <md-input-container class="md-block" flex-gt-sm>
+          <p><strong>Your kind of food</strong></p>
+          <p>{{ formFood.Food }}</p>
+        <div flex="10" hide-xs hide-sm>
+            <!-- Spacer //-->
+        </div>
+      </div>
 	</div>
 </div>

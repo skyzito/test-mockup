@@ -1,9 +1,9 @@
 
 <div layout="vertical" layout-fill>
-  <div layout="column" style="width:100%;">
-      <md-toolbar style="text-align:center;">
+  <div layout="column" class="wdt-100">
+      <md-toolbar class="text-center">
           <h1>Angular Test</h1>
-          <h2>Game Of Thrones Pool</h2>
+          <h2>Game Of Thrones Quiz</h2>
       </md-toolbar>
   </div>
 </div>
@@ -14,7 +14,7 @@
         <md-card-title>
 	          <md-card-title-media>
 	            <div class="md-media-lg card-media">
-	            	<img src="{{dataGameOfThrones['Poster']}}" alt="" style="width:125px;height:125px;">
+	            	<img src="{{dataGameOfThrones['Poster']}}" class="got-thumb" alt="">
 	            </div>
 	          </md-card-title-media>
 
@@ -25,7 +25,7 @@
 	          </md-card-title-text>
         </md-card-title>
         <div>
-          <form name="gameOfThronesForm"  form-step-validity>
+          <form class="form-game-of-thrones" name="gameOfThronesForm"  form-step-validity>
             	<!-- <p>Selected Value: <span class="radioValue">{{ data.group1 }}</span> </p> -->
 			    <label>
 	                <input 
@@ -83,7 +83,8 @@
 	            </label>
             </form>
         </div>
-        <table class="table-got" wt-responsive-table>
+
+        <table class="table-got" wt-responsive-table ng-if="dataGameOfThronesSeason">
 			<thead>
 				<tr>
 					<th>Episode</th>
