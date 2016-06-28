@@ -7,11 +7,6 @@
             Prev
         </button>
 
-        <!-- <strong ng-bind-template="First Question : {{model.firstQuestion}}"></strong>
-        <strong ng-bind-template="Second Question : {{model.secondQuestion}}"></strong>
-        <strong ng-bind-template="Third Question : {{model.thirdQuestion}}"></strong>
-        <strong ng-bind-template="Fourth Question : {{model.fourthQuestion}}"></strong> -->
-
         <button ng-disabled="$isLast() || ($getActiveStep().hasForm && !$getActiveStep().valid)" class="md-raised md-primary md-button md-ink-ripple" ng-click="$nextStep()">
             Next
             <span class="fa fa-chevron-right"></span>
