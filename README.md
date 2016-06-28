@@ -11,3 +11,5 @@ Angular mockup test instructions:
 5 - Run gulp serve
 
 6 - Access via browser http://localhost:3000/
+
+Command to run tests : gulp test
