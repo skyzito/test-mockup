@@ -58,6 +58,7 @@
 
         getStarWars();
         getGameOfThrones();
+        vm.getGameOfThronesSeason(1);
 
     // activate();
 
