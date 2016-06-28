@@ -1,39 +1,39 @@
 (function() {
   'use strict';
 
-  describe('controllers', function(){
-    var vm;
-    var $timeout;
-    var toastr;
+  describe('Testing star wars Object', function() {
+    var $controller;
 
-    beforeEach(module('testMockup'));
-    beforeEach(inject(function(_$controller_, _$timeout_, _webDevTec_, _toastr_) {
-      spyOn(_webDevTec_, 'getTec').and.returnValue([{}, {}, {}, {}, {}]);
-      spyOn(_toastr_, 'info').and.callThrough();
-
-      vm = _$controller_('MainController');
-      $timeout = _$timeout_;
-      toastr = _toastr_;
-    }));
-
-    it('should have a timestamp creation date', function() {
-      expect(vm.creationDate).toEqual(jasmine.any(Number));
+    beforeEach(function(){
+      module('testMockup');
+      inject(function(_$controller_){
+        $controller = _$controller_;
+      });
     });
 
-    it('should define animate class after delaying timeout ', function() {
-      $timeout.flush();
-      expect(vm.classAnimation).toEqual('rubberBand');
+    it('Should formStarWars is a object', function() {
+      var $scope = {};
+      var controller = $controller('MainController', { $scope: $scope });
+      expect(angular.isObject($scope.formStarWars)).toBeTruthy();
     });
 
-    it('should show a Toastr info and stop animation when invoke showToastr()', function() {
-      vm.showToastr();
-      expect(toastr.info).toHaveBeenCalled();
-      expect(vm.classAnimation).toEqual('');
+    it('Should formGameOfThrones is a object', function() {
+      var $scope = {};
+      var controller = $controller('MainController', { $scope: $scope });
+      expect(angular.isObject($scope.formGameOfThrones)).toBeTruthy();
     });
 
-    it('should define more than 5 awesome things', function() {
-      expect(angular.isArray(vm.awesomeThings)).toBeTruthy();
-      expect(vm.awesomeThings.length === 5).toBeTruthy();
+    it('Should formFood is a object', function() {
+      var $scope = {};
+      var controller = $controller('MainController', { $scope: $scope });
+      expect(angular.isObject($scope.formFood)).toBeTruthy();
     });
+
+    it('Should Steps is a object', function() {
+      var $scope = {};
+      var controller = $controller('MainController', { $scope: $scope });
+      expect(angular.isObject($scope.steps)).toBeTruthy();
+    });
+
   });
 })();
