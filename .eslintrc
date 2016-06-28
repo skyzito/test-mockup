@@ -1,6 +1,9 @@
 {
   "extends": "eslint:recommended",
   "plugins": ["angular"],
+  "rules": {
+      "angular/di": [0], // turn it off completely
+  },
   "env": {
     "browser": true,
     "jasmine": true
