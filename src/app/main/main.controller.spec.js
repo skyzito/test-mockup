@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  describe('Testing star wars Object', function() {
+  describe('Testing objects', function() {
     var $controller;
 
     beforeEach(function(){
@@ -29,10 +29,10 @@
       expect(angular.isObject($scope.formFood)).toBeTruthy();
     });
 
-    it('Should Steps is a object', function() {
-      var $scope = {};
+    it('Should Steps is a array', function() {
+      var $scope = [];
       var controller = $controller('MainController', { $scope: $scope });
-      expect(angular.isObject($scope.steps)).toBeTruthy();
+      expect(angular.isArray($scope.steps)).toBeTruthy();
     });
 
   });
