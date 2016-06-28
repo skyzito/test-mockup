@@ -1,8 +1,8 @@
 Angular mockup test instructions:
 
-1 - Clone the project ( git clone git@github.com:skyzito/test-mockup.git <folder-name> )
+1 - Clone the project ( git clone git@github.com:skyzito/test-mockup.git folder-name )
 
-2 - cd <folder-name>
+2 - cd folder-name
 
 3 - Run npm install
 
