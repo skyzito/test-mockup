@@ -4,16 +4,18 @@
 			<h1>Angular Test</h1>
 			<h2>Star Wars Quiz</h2>
 		</md-toolbar>
-		<form class="form-star-wars" layout="row" layout-padding layout-wrap ng-cloak form-step-validity>
-			<div flex="25" flex-md="33" flex-sm="50" flex-xs="100" ng-repeat="item in dataStarWars.Search">
-				<div><img src="{{item['Poster']}}" class="star-wars-thumb block" alt=""></div>
-			    <div>
-					 <label class="block">
-		                <input type="radio" name="film" value="{{item['Title']}}" ng-model="formStarWars.film" required>
-		                {{item["Title"]}}
-		            </label>
+		<div class="container">
+			<form class="form-star-wars" layout="row" layout-padding layout-wrap ng-cloak form-step-validity>
+				<div flex="25" flex-md="33" flex-sm="50" flex-xs="100" ng-repeat="item in dataStarWars.Search">
+					<div><img src="{{item['Poster']}}" class="star-wars-thumb block" alt=""></div>
+				    <div>
+						 <label class="block title-film">
+			                <input type="radio" name="film" value="{{item['Title']}}" ng-model="formStarWars.film" required>
+			                {{item["Title"]}}
+			            </label>
+					</div>
 				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	</div>
 </div>

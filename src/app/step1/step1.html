@@ -1,56 +1,42 @@
-<div layout="column" ng-hide="!$isFirst()">
+
+<div layout="row" ng-hide="!$isFirst()">
       <md-toolbar class="text-center">
           <h1>Angular Test</h1>
           <h2>Answer the questions</h2>
       </md-toolbar>
-      <div layout="vertical" layout-fill>
-        <div class="wdt-100" layout="column">
-              <form name="questionsForm" class="form-questions" form-step-validity>
-              <legend>Things About you...</legend>
-                <div layout-gt-sm="row">
-                  <div flex="10" hide-xs hide-sm>
-                      <!-- Spacer //-->
-                  </div>
-                  <md-input-container class="md-block" flex-gt-sm>
-                    <label>Your Favorite Comic super hero</label>
-                    <input type="text" ng-model="model.firstQuestion" name="firstQuestion" required>
-                    <p ng-show="questionsForm.firstQuestion.$invalid" class="help-block">This field is required.</p>
-                  </md-input-container>
-                  <div flex="5" hide-xs hide-sm>
-                    <!-- Spacer //-->
-                  </div>
-                  <md-input-container class="md-block" flex-gt-sm>
-                    <label>Tv Series that you are currently watching</label>
-                    <input type="text" ng-model="model.secondQuestion" name="secondQuestion" required>
-                    <p ng-show="questionsForm.secondQuestion.$invalid" class="help-block">This field is required.</p>
-                  </md-input-container>
-                  <div flex="10" hide-xs hide-sm>
-                      <!-- Spacer //-->
-                  </div>
-                </div>
-                <div layout-gt-sm="row">
-                  <div flex="10" hide-xs hide-sm>
-                      <!-- Spacer //-->
-                  </div>
-                  <md-input-container class="md-block" flex-gt-sm>
-                    <label>Wich one do you use: Bolacha or biscoito?</label>
-                    <input type="text" ng-model="model.thirdQuestion" name="thirdQuestion" required>
-                    <p ng-show="questionsForm.thirdQuestion.$invalid" class="help-block">This field is required.</p>
-                  </md-input-container>
-                  <div flex="5" hide-xs hide-sm>
-                    <!-- Spacer //-->
-                  </div>
-                  <md-input-container class="md-block" flex-gt-sm>
-                    <label>What is the best quote ever</label>
-                    <input type="text" ng-model="model.fourthQuestion" name="fourthQuestion" required>
-                    <p ng-show="questionsForm.fourthQuestion.$invalid" class="help-block">This field is required.</p>
-                  </md-input-container>
-                  <div flex="10" hide-xs hide-sm>
-                      <!-- Spacer //-->
-                  </div>
-                </div>
-              </form>
-              
-        </div>
-      </div>
+</div>
+
+<div class="container" ng-hide="!$isFirst()">
+    <form name="questionsForm" class="form-questions" form-step-validity>
+    <legend>Things About you...</legend>
+
+    <div layout="column" layout-gt-xs="row">
+      <md-input-container flex>
+        <label>Your Favorite Comic super hero</label>
+        <input type="text" ng-model="model.firstQuestion" name="firstQuestion" required>
+        <p ng-show="questionsForm.firstQuestion.$invalid" class="help-block">This field is required.</p>
+      </md-input-container>
+
+      <md-input-container flex>
+        <label>Tv Series that you are currently watching</label>
+        <input type="text" ng-model="model.secondQuestion" name="secondQuestion" required>
+        <p ng-show="questionsForm.secondQuestion.$invalid" class="help-block">This field is required.</p>
+      </md-input-container>
     </div>
+
+    <div layout="column" layout-gt-xs="row">
+      <md-radio-group ng-model="model.radioQuestion" flex required>
+        <label for="">Wich one do you use: Bolacha or biscoito?</label>
+        <md-radio-button value="Biscoito" class="md-primary">Biscoito</md-radio-button>
+        <md-radio-button value="Bolacha"> Bolacha </md-radio-button>
+      </md-radio-group>
+
+      <md-input-container flex>
+        <label>What is the best quote ever</label>
+        <input type="text" ng-model="model.fourthQuestion" name="fourthQuestion" required>
+        <p ng-show="questionsForm.fourthQuestion.$invalid" class="help-block">This field is required.</p>
+      </md-input-container>
+    </div>
+  </form>
+</div>
+

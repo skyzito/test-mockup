@@ -8,78 +8,80 @@
   </div>
 </div>
 
-<div layout="vertical" layout-fill>
-	<div layout="column" class="wdt-100">
+<div class="container">
+  <div layout="vertical" layout-fill>
+  	<div layout="column" class="wdt-100">
+          <div layout-gt-sm="row">
+            <div flex="10">
+                <!-- Spacer //-->
+            </div>
+            <md-input-container class="md-block" flex-gt-sm>
+              <p><strong>Your Favorite Comic super hero</strong></p>
+              <p>{{model.firstQuestion}}</p>
+            </md-input-container>
+            <div flex="5" hide-xs hide-sm>
+              <!-- Spacer //-->
+            </div>
+            <md-input-container class="md-block" flex-gt-sm>
+              <p><strong>Tv Series that you are currently watching</strong></p>
+              <p>{{model.secondQuestion}}</p>
+            </md-input-container>
+            <div flex="10" hide-xs hide-sm>
+                <!-- Spacer //-->
+            </div>
+          </div>
+          <div layout-gt-sm="row">
+            <div flex="10" hide-xs hide-sm>
+                <!-- Spacer //-->
+            </div>
+            <md-input-container class="md-block" flex-gt-sm>
+              <p><strong>Wich one do you use: Bolacha or biscoito?</strong></p>
+              <p>{{model.radioQuestion}}</p>
+            </md-input-container>
+            <div flex="5" hide-xs hide-sm>
+              <!-- Spacer //-->
+            </div>
+            <md-input-container class="md-block" flex-gt-sm>
+              <p><strong>What is the best quote ever</strong></p>
+              <p>{{model.fourthQuestion}}</p>
+            </md-input-container>
+            <div flex="10" hide-xs hide-sm>
+                <!-- Spacer //-->
+            </div>
+          </div>
+  	</div>
+  </div>
+
+  <div layout="vertical" layout-fill>
+  	<div layout="column" class="wdt-100">
         <div layout-gt-sm="row">
           <div flex="10">
               <!-- Spacer //-->
           </div>
+          
+           <md-input-container class="md-block" flex-gt-sm>
+            <p><strong>Your favorite star war movie</strong></p>
+            <p>{{ formStarWars.film }}</p>
+          </md-input-container>
+
+          <div flex="5" hide-xs hide-sm>
+            <!-- Spacer //-->
+          </div>
+
           <md-input-container class="md-block" flex-gt-sm>
-            <p><strong>Your Favorite Comic super hero</strong></p>
-            <p>{{model.firstQuestion}}</p>
+            <p><strong>Your favorite GoT Season</strong></p>
+            <p>Season: {{ formGameOfThrones.Season }}</p>
           </md-input-container>
           <div flex="5" hide-xs hide-sm>
             <!-- Spacer //-->
           </div>
           <md-input-container class="md-block" flex-gt-sm>
-            <p><strong>Tv Series that you are currently watching</strong></p>
-            <p>{{model.secondQuestion}}</p>
-          </md-input-container>
+            <p><strong>Your kind of food</strong></p>
+            <p>{{ formFood.Food }}</p>
           <div flex="10" hide-xs hide-sm>
               <!-- Spacer //-->
           </div>
         </div>
-        <div layout-gt-sm="row">
-          <div flex="10" hide-xs hide-sm>
-              <!-- Spacer //-->
-          </div>
-          <md-input-container class="md-block" flex-gt-sm>
-            <p><strong>Wich one do you use: Bolacha or biscoito?</strong></p>
-            <p>{{model.thirdQuestion}}</p>
-          </md-input-container>
-          <div flex="5" hide-xs hide-sm>
-            <!-- Spacer //-->
-          </div>
-          <md-input-container class="md-block" flex-gt-sm>
-            <p><strong>What is the best quote ever</strong></p>
-            <p>{{model.fourthQuestion}}</p>
-          </md-input-container>
-          <div flex="10" hide-xs hide-sm>
-              <!-- Spacer //-->
-          </div>
-        </div>
-	</div>
-</div>
-
-<div layout="vertical" layout-fill>
-	<div layout="column" class="wdt-100">
-      <div layout-gt-sm="row">
-        <div flex="10">
-            <!-- Spacer //-->
-        </div>
-        
-         <md-input-container class="md-block" flex-gt-sm>
-          <p><strong>Your favorite star war movie</strong></p>
-          <p>{{ formStarWars.film }}</p>
-        </md-input-container>
-
-        <div flex="5" hide-xs hide-sm>
-          <!-- Spacer //-->
-        </div>
-
-        <md-input-container class="md-block" flex-gt-sm>
-          <p><strong>Your favorite GoT Season</strong></p>
-          <p>Season: {{ formGameOfThrones.Season }}</p>
-        </md-input-container>
-        <div flex="5" hide-xs hide-sm>
-          <!-- Spacer //-->
-        </div>
-        <md-input-container class="md-block" flex-gt-sm>
-          <p><strong>Your kind of food</strong></p>
-          <p>{{ formFood.Food }}</p>
-        <div flex="10" hide-xs hide-sm>
-            <!-- Spacer //-->
-        </div>
-      </div>
-	</div>
+  	</div>
+  </div>
 </div>

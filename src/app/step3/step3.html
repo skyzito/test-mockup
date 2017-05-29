@@ -7,24 +7,23 @@
       </md-toolbar>
   </div>
 </div>
+  <div class="container">
+	  <md-content class="md-padding" layout-align="center center" layout-xs="column" layout="row">
+	    <div flex layout="column">
+	      <md-card>
+	        <md-card-title>
+		          <md-card-title-media>
+		            <div class="md-media-lg card-media">
+		            	<img src="{{dataGameOfThrones['Poster']}}" class="got-thumb" alt="">
+		            </div>
+		          </md-card-title-media>
 
-  <md-content class="md-padding" layout-align="center center" layout-xs="column" layout="row">
-    <div flex-xs flex-gt-xs="50" layout="column">
-      <md-card>
-        <md-card-title>
-	          <md-card-title-media>
-	            <div class="md-media-lg card-media">
-	            	<img src="{{dataGameOfThrones['Poster']}}" class="got-thumb" alt="">
-	            </div>
-	          </md-card-title-media>
-
-			  
-	          <md-card-title-text>
-	            <span class="md-headline">{{dataGameOfThrones["Year"]}}{{dataGameOfThrones["Title"]}}</span>
-	            <p>{{dataGameOfThrones["Plot"]}}</p>
-	          </md-card-title-text>
-        </md-card-title>
-        <div>
+				  
+		          <md-card-title-text>
+		            <span class="md-headline">{{dataGameOfThrones["Year"]}}{{dataGameOfThrones["Title"]}}</span>
+		            <p>{{dataGameOfThrones["Plot"]}}</p>
+		          </md-card-title-text>
+	        </md-card-title>
           <form class="form-game-of-thrones" name="gameOfThronesForm"  form-step-validity>
             	<!-- <p>Selected Value: <span class="radioValue">{{ data.group1 }}</span> </p> -->
 			    <label>
@@ -82,28 +81,28 @@
 	                6
 	            </label>
             </form>
-        </div>
 
-        <table class="table-got" wt-responsive-table ng-if="dataGameOfThronesSeason">
-			<thead>
-				<tr>
-					<th>Episode</th>
-					<th>Name</th>
-					<th>Released</th>
-					<th>Imbd Rating</th>
-				</tr>
-			</thead>
+	        <table class="table-got" wt-responsive-table ng-if="formGameOfThrones">
+				<thead>
+					<tr>
+						<th>Episode</th>
+						<th>Name</th>
+						<th>Released</th>
+						<th>Imbd Rating</th>
+					</tr>
+				</thead>
 
-			<tbody>
+				<tbody>
 
-				<tr ng-repeat="item in dataGameOfThronesSeason.Episodes">
-					<td>{{item["Episode"]}}</td>
-					<td>{{item["Title"]}}</td>
-					<td>{{item["Released"]}}</td>
-					<td>{{item["imdbID"]}}</td>
-				</tr>
-			</tbody>	 
-		</table>
-      </md-card>
-    </div>
-  </md-content>
+					<tr ng-repeat="item in formGameOfThrones.Episodes">
+						<td>{{item["Episode"]}}</td>
+						<td>{{item["Title"]}}</td>
+						<td>{{item["Released"]}}</td>
+						<td>{{item["imdbID"]}}</td>
+					</tr>
+				</tbody>	 
+			</table>
+	      </md-card>
+	    </div>
+	  </md-content>
+	</div>
