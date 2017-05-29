@@ -4,7 +4,9 @@
  */
 // bower:scss
 // endbower
-
+body{
+  font-family: Roboto;
+}
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
 @font-face {
@@ -18,7 +20,17 @@
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff) format('woff'),
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
-
+.container{
+  width:100%;
+  max-width:960px;
+  margin:0 auto;
+  form{
+    padding:0 25px;
+  }
+}
+.title-film{
+  margin:20px 0;
+}
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
